@@ -2,28 +2,42 @@
 #include <math.h>
 
 int main(){
-    int n1, n2, result;
-    char opc;
+    int n1, n2, result, opc;
 
-    printf("Digite a função que você deseja: ");
-    scanf("%d", &opc);
+    printf("digite o primeiro numero para fazer o calculo: \n");
+    scanf("%d", &n1);
+    printf("digite o segundo numero para fazer o calculo: \n");
+    scanf("%d", &n2);
+    printf("Digite a função que você deseja: \n");
+    printf("1- Adicao.\n");
+    printf("2- Subtracao.\n");
+    printf("3- Multiplicacao.\n");
+    printf("4- Divisao.\n");
+    scanf(" %d", &opc);
 
     switch (opc)
     {
-    case '+'/* constant-expression */:
-        n1 + n2;
+    case 1:
+        result = n1 + n2;
         break;
     
-    case '-':
-        n1 - n2;
+    case 2:
+        result = n1 - n2;
         break;
     
-    case '*':
-        n1 * n2;
+    case 3:
+        result = n1 * n2;
         break;
-    case '/':
-        n1 / n2;
+    
+    case 4:
+       result = n1 / n2;
         break;
+    
+    default:
+        printf("Opcao invalida!\n");
     }
+
+    if(opc <= 4)
+        printf("O resultado é: %d", result);
     return 0;
 }
